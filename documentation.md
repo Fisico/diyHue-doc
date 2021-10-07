@@ -10,7 +10,7 @@
 <br></br>
 
 
-diyHue provides a Ecosystem for several smart home solutions, eliminating the need for vendor specific bridges and hardware.
+diyHue provides an ecosystem for several smart home solutions, eliminating the need for vendor specific bridges and hardware.
 It is Open Source and written in Python, you are now able to import and control all your lights and sensors into one system.
 
 Lightweight and resource friendly, to run on small devices like the RPi .... 24/7
@@ -48,10 +48,13 @@ Enjoy your diyHue enlighted home.
   - Install Docker ```sudo sh get-docker.sh```
   - Install Python 3 pip ```sudo apt install python3-pip```
   - Install Docker compose ```sudo pip3 install docker-compose```
-    Create DiyHue config directory```mkdir /opt/hue-emulator/config```
+    Create DiyHue config directory ```mkdir /opt/hue-emulator/config```
   - Navigate to Docker folder ```cd /etc/docker/```
   - Create Docker compose file ```sudo nano docker-compose.yml```
+  - Copy MAC address ```ip a``` 
+  - Copy Timezone from
   - Paste Docker-compose.yaml [template](template.md)
+  - Paste MAC address and Timezone 
   - Save Docker-compose.yml with ```control + o``` -> ```enter``` ->  ```control + x```
   - Start Docker container ```sudo docker-compose up -d```
   - Open a browser and type the IP-Address of your Raspberry and login with ```admin@diyhue.org``` and ```changeme```
