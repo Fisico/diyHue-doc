@@ -33,7 +33,7 @@ Enjoy your diyHue enlighted home.
 
 [Recommendation - minimal setup](./recommendation.md)
 
-[Working diyHue features](./Workingfeatures.md)
+[Working diyHue features](./WorkingFeatures.md)
 
 # Installation
 
