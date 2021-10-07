@@ -10,14 +10,14 @@
 <br></br>
 
 
-diyHue provides a Ecosystem for several Smart Home Solutions, eliminating the need for vendor specific Bridges and Hardware.
-Written in Python and Open Source, you are now able to import and control all your Lights and Sensors into one System.
+diyHue provides a Ecosystem for several Smart Home solutions, eliminating the need for vendor specific Bridges and Hardware.
+Written in Python and Open Source, you are now able to import and control all your lights and sensors into one system.
 
 Lightweight and resource friendly, to run on small devices like the RPi .... 24/7
 
-The Best part? No Cloud connection by Design!
+The best part? No cloud connection by design!
 
-Enjoy your diyHue enlighted Home.
+Enjoy your diyHue enlighted home.
 <!-- 
 This project emulates a Philips Hue Bridge that is able to control ZigBee lights (using Raspbee module, original Hue Bridge or IKEA Trådfri Gateway), Mi-Light bulbs (using MiLight Hub), Neopixel strips (WS2812B and SK6812) and any cheap ESP8266 based bulb by replacing the firmware with a custom one. It is written in Python and will run on all small devices such as the Raspberry Pi. Arduino sketches are provided for the Hue Dimmer Switch, Hue Tap Switch and Hue Motion Sensor. Lights are two-way synchronized so any change made from original Philips/Trådfri sensors and switches will also be applied to the bridge emulator. -->
 
@@ -47,11 +47,11 @@ All documentation and instructions can be found over at [diyhue.readthedocs.io](
 
 
 ## Recommendation - minimal setup
-You need a system that can run a Docker Image  24/7!
+You need a system that can run a Docker image 24/7!
 
 Emulator | Lights | App
 -------- | -------- | ---
-RaspberryPi 3B |  WS2812 Strip + Wemos D1 mini Board | [Hue Essentials (iOS & Android)](https://hueessentials.com) or the [offical Hue App](https://www.philips-hue.com/)
+RaspberryPi 3B |  WS2812 strip + Wemos D1 mini board | [Hue Essentials (iOS & Android)](https://hueessentials.com) or the [offical Hue App](https://www.philips-hue.com/)
 
 
 
@@ -75,11 +75,11 @@ Hue entertainment | |  | On/Off 433Mhz devices (multiple devices for every esp82
 
 # Installation
 
-2020 Phillips released a huge update that required a reverse engineering of the Phillips Hue Bridge and a complete rewrite of the diyHue Bridge, in order to use DiyHue with the latest Hue App and products, you have to upgrade to the newest diyHue Version. Old configs are sadly not upgradeable.
+2021 Phillips released a huge update that required a reverse engineering of the Phillips Hue Bridge and a complete rewrite of the diyHue Bridge. In order to use DiyHue with the latest Hue App and products, you have to upgrade to the newest diyHue Version. Old configs are not upgradeable.
 
 
-- Connect to a system that can run docker 24/7 (raspberry pi for example)
-- Raspberry Pi Setup:
+- Connect to a system that can run Docker 24/7 (Raspberry Pi for example)
+- Raspberry Pi setup:
   - ```apt-get update```
   - ```apt-get upgrade```
   - Download Docker installation script ```curl -fsSL https://get.docker.com -o get-docker.sh```
@@ -100,7 +100,7 @@ Hue entertainment | |  | On/Off 433Mhz devices (multiple devices for every esp82
 ## Updating DiyHue 
 To update to the latest version of diyHue, the config keeps unchanged:
 - Stop Docker container ```sudo docker stop "diyhue"```
-- Remove Docker container: ```sudo docker rm -f diyhue```
+- Remove Docker container ```sudo docker rm -f diyhue```
 - ```sudo docker system prune -af```
 - Navigate to docker directory ```cd /etc/docker/```
 - Start new container ```sudo docker-compose up -d```
@@ -122,15 +122,15 @@ If you need help with diyHue you can get support from other users, aswell as the
 ### Slack [![JoinSlack](https://img.shields.io/badge/Join%20us-on%20Slack-green.svg)](https://join.slack.com/t/diyhue/shared_invite/enQtNzAwNDE1NDY2MzQxLTljNGMwZmE0OWRhNDIwM2FjOGM1ZTcxNjNmYjc5ZmE3MjZlNmNjMmUzYmRkZjhhOGNjOTc4NzA0MGVkYzE2NWM) [![SlackStatus](https://slackinvite.squishedmooo.com/badge.svg?colorB=8ebc06)](https://slackinvite.squishedmooo.com/)
 Use Slack for a general chat or fast live support. 
 
-However: Since Slack is faster at providing live Support but not as good when it comes to save and show known Issues, we kindly ask you to open a Topic at our Discourse group. This will provide Help for others in the future.
+However: Since Slack is faster at providing live support but not as good when it comes to save and show known issues, we kindly ask you to open a topic at our discourse group. This will provide help for others in the future.
 
 ### Discourse [![Discourse](https://img.shields.io/discourse/users?server=https%3A%2F%2Fdiyhue.discourse.group)](https://diyhue.discourse.group)
 
-Our Board might already have your fix and answer ready. Have a look!
+Our board might already have your fix and answer ready. Have a look!
 
 
-> General Note:
-> Please provide some Logs to make it easier for all of us. Enable Debug by manually starting diyHue with additional `--debug true` argument.
+> General note:
+> Please provide some logs to make it easier for all of us. Enable Debug by manually starting diyHue with additional `--debug true` argument.
 
 
   
@@ -151,8 +151,8 @@ Please post on our [Slack team](https://slackinvite.squishedmooo.com/) any other
 
 ## Contribute
 
-diyHue is Opensource and maintained by volunteers in their free time. You are welcome to contribute and become a recognised member of the diyHue community.
-Feel free to add PR and Commits to our Dev Branch.
+diyHue is open source and maintained by volunteers in their free time. You are welcome to contribute and become a recognised member of the diyHue community.
+Feel free to add pullrequests and commits to our beta branch.
 If you are experienced in 
 - Webdesign
 - Python
@@ -163,7 +163,7 @@ We highly appreciate your support, making diyHue even better!
 
 ## Support
 
-diyHue is and will be Free to use. However it does take a lot of time to maintain the code etc etc.
+diyHue is and will be free to use. However it does take a lot of time to maintain the code etc etc.
 
 Long story short.... you can support us at Ko-Fi
 
