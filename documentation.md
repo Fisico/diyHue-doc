@@ -1,84 +1,46 @@
 # diyHue - A Hue Bridge Emulator
 [![Discourse](https://img.shields.io/discourse/users?server=https%3A%2F%2Fdiyhue.discourse.group)](https://diyhue.discourse.group) [![JoinSlack](https://img.shields.io/badge/Join%20us-on%20Slack-green.svg)](https://join.slack.com/t/diyhue/shared_invite/enQtNzAwNDE1NDY2MzQxLTljNGMwZmE0OWRhNDIwM2FjOGM1ZTcxNjNmYjc5ZmE3MjZlNmNjMmUzYmRkZjhhOGNjOTc4NzA0MGVkYzE2NWM)  [![Build Status](https://github.com/diyhue/diyHue/workflows/diyHue%20CI%20Build/badge.svg)](https://github.com/diyhue/diyHue/actions)
+[![DockerPulls](https://img.shields.io/docker/pulls/diyhue/core.svg)](https://hub.docker.com/r/diyhue/core/)
+[![CommitActivity](https://img.shields.io/github/commit-activity/y/diyhue/diyhue.svg)](https://github.com/diyhue/diyHue/commits/master)
 
 
-
-<!--[![Build Status](https://travis-ci.com/diyhue/diyHue.svg?branch=master)](https://travis-ci.com/diyhue/diyHue)-->
 <br></br>
 ![diyHueLogo](https://diyhue.org/cdn/img/diyHue-Logo.png)
 
 <br></br>
 
 
-diyHue provides a Ecosystem for several Smart Home solutions, eliminating the need for vendor specific Bridges and Hardware.
-Written in Python and Open Source, you are now able to import and control all your lights and sensors into one system.
+diyHue provides a Ecosystem for several smart home solutions, eliminating the need for vendor specific bridges and hardware.
+It is Open Source and written in Python, you are now able to import and control all your lights and sensors into one system.
 
 Lightweight and resource friendly, to run on small devices like the RPi .... 24/7
 
 The best part? No cloud connection by design!
 
 Enjoy your diyHue enlighted home.
-<!-- 
-This project emulates a Philips Hue Bridge that is able to control ZigBee lights (using Raspbee module, original Hue Bridge or IKEA Trådfri Gateway), Mi-Light bulbs (using MiLight Hub), Neopixel strips (WS2812B and SK6812) and any cheap ESP8266 based bulb by replacing the firmware with a custom one. It is written in Python and will run on all small devices such as the Raspberry Pi. Arduino sketches are provided for the Hue Dimmer Switch, Hue Tap Switch and Hue Motion Sensor. Lights are two-way synchronized so any change made from original Philips/Trådfri sensors and switches will also be applied to the bridge emulator. -->
+
 
 ![diyHue ecosystem](https://raw.githubusercontent.com/diyhue/diyhue.github.io/master/assets/images/hue-map.png)
 
 
-## Stats
-[![DockerPulls](https://img.shields.io/docker/pulls/diyhue/core.svg)](https://hub.docker.com/r/diyhue/core/)
-[![CommitActivity](https://img.shields.io/github/commit-activity/y/diyhue/diyhue.svg)](https://github.com/diyhue/diyHue/commits/master)
-[![arm version badge](https://images.microbadger.com/badges/version/diyhue/core:arm.svg)](https://microbadger.com/images/diyhue/core:arm "Get your own version badge on microbadger.com")
-[![arm-size-batch](https://images.microbadger.com/badges/image/diyhue/core:arm.svg)](https://microbadger.com/images/diyhue/core:arm "Get your own image badge on microbadger.com")
-[![amd version badge](https://images.microbadger.com/badges/version/diyhue/core:amd64.svg)](https://microbadger.com/images/diyhue/core:amd64 "Get your own version badge on microbadger.com")
-[![amd size badge](https://images.microbadger.com/badges/image/diyhue/core:amd64.svg)](https://microbadger.com/images/diyhue/core:amd64 "Get your own image badge on microbadger.com")
 
-
-
-
-## Getting Started
-
-All documentation and instructions can be found over at [diyhue.readthedocs.io](https://diyhue.readthedocs.io/)
 
 ## Requirements
 
-- Docker
+- A system that can run Docker images 24/7 (Raspberry Pi for example)
 - Python 3
 - Python modules: ws4py, requests, astral, paho-mqtt [see requirements.txt](./requirements.txt)
 
+[Recommendation - minimal setup](./recommendation.md)
 
-## Recommendation - minimal setup
-You need a system that can run a Docker image 24/7!
-
-Emulator | Lights | App
--------- | -------- | ---
-RaspberryPi 3B |  WS2812 strip + Wemos D1 mini board | [Hue Essentials (iOS & Android)](https://hueessentials.com) or the [offical Hue App](https://www.philips-hue.com/)
-
-
-
-
-## Working diyHue features
-Functions | Devices  | Apps | Lights | Smarthome
---------- | -------  | ---- | ------ | ---------
-Control lights (all functions) | Amazon Alexa (control only the lights) | [Hue Essentials](https://hueessentials.com) | WS2812B and SK6812 smart led strips| [Home Assistant](https://homeassistant.io) |
-Control groups (all functions) | Deconz (Conbee 1 & 2)  | Hue App| Phillips Hue | [Openhab](https://openhab.org)
-Scenes (all functions) | Trådfri Gateway | hueManic | Ikea Trådfri| Jeedom 
-Routines | Hue Bridge (original + other emulators) | Kodi Hue Ambilight|  Yeelight  |  Domoticz
-Wake up | Logitech Harmony| OnSwitch|   MiLight | [Home Assistant Add-on](https://github.com/MaxBec/hassio-diyHue)
-Go to sleep |Philips Ambilight TV's | LampShade|  [Hyperion.ng](https://github.com/hyperion-project/hyperion.ng) |
-Switches (custom esp8266 switches) | | Hue Sync for PC|  MQTT lights [see mqtt](https://diyhue.readthedocs.io/en/latest/lights/mqtt.html) | 
-Autodiscover lights | | HueSwitcher |  any PWM(CCT, RGB, RGBW) incl. Dimming|
-Hue entertainment | |  | On/Off 433Mhz devices (multiple devices for every esp8266) | 
- | || | LYT8266|
- | || | [WLED](https://github.com/aircoookie/wled)|
-
-
+[Working diyHue features](./Workingfeatures.md)
 
 # Installation
 
 2021 Phillips released a huge update that required a reverse engineering of the Phillips Hue Bridge and a complete rewrite of the diyHue Bridge. In order to use DiyHue with the latest Hue App and products, you have to upgrade to the newest diyHue Version. Old configs are not upgradeable.
 
 
-- Connect to a system that can run Docker 24/7 (Raspberry Pi for example)
+- Connect to 
 - Raspberry Pi setup:
   - ```apt-get update```
   - ```apt-get upgrade```
@@ -98,7 +60,7 @@ Hue entertainment | |  | On/Off 433Mhz devices (multiple devices for every esp82
 
 
 ## Updating DiyHue 
-To update to the latest version of diyHue, the config keeps unchanged:
+Steps to update to the latest version of diyHue, the config keeps unchanged:
 - Stop Docker container ```sudo docker stop "diyhue"```
 - Remove Docker container ```sudo docker rm -f diyhue```
 - ```sudo docker system prune -af```
@@ -110,21 +72,21 @@ To update to the latest version of diyHue, the config keeps unchanged:
 - ```sudo docker stop "diyhue"```
 - ```sudo docker restart "diyhue"```
 
-## Logs
-Before opening an issue please locate the errorlog with ```sudo docker logs --tail 50 -f diyhue``` and paste a pastebin.com link in the issue.
 
-## Support  
 
-All documentation and instructions can be found over at [diyhue.readthedocs.io](https://diyhue.readthedocs.io/)
-
+<br></br>
+# Get Help  
 If you need help with diyHue you can get support from other users, aswell as the maintainer.
 
-### Slack [![JoinSlack](https://img.shields.io/badge/Join%20us-on%20Slack-green.svg)](https://join.slack.com/t/diyhue/shared_invite/enQtNzAwNDE1NDY2MzQxLTljNGMwZmE0OWRhNDIwM2FjOGM1ZTcxNjNmYjc5ZmE3MjZlNmNjMmUzYmRkZjhhOGNjOTc4NzA0MGVkYzE2NWM) [![SlackStatus](https://slackinvite.squishedmooo.com/badge.svg?colorB=8ebc06)](https://slackinvite.squishedmooo.com/)
+## Logs
+Before opening an issue please locate the errorlog with ```sudo docker logs --tail 50 -f diyhue``` and paste a pastebin.com link into the issue.
+
+## Slack [![JoinSlack](https://img.shields.io/badge/Join%20us-on%20Slack-green.svg)](https://join.slack.com/t/diyhue/shared_invite/enQtNzAwNDE1NDY2MzQxLTljNGMwZmE0OWRhNDIwM2FjOGM1ZTcxNjNmYjc5ZmE3MjZlNmNjMmUzYmRkZjhhOGNjOTc4NzA0MGVkYzE2NWM) [![SlackStatus](https://slackinvite.squishedmooo.com/badge.svg?colorB=8ebc06)](https://slackinvite.squishedmooo.com/)
 Use Slack for a general chat or fast live support. 
 
 However: Since Slack is faster at providing live support but not as good when it comes to save and show known issues, we kindly ask you to open a topic at our discourse group. This will provide help for others in the future.
 
-### Discourse [![Discourse](https://img.shields.io/discourse/users?server=https%3A%2F%2Fdiyhue.discourse.group)](https://diyhue.discourse.group)
+## Discourse [![Discourse](https://img.shields.io/discourse/users?server=https%3A%2F%2Fdiyhue.discourse.group)](https://diyhue.discourse.group)
 
 Our board might already have your fix and answer ready. Have a look!
 
@@ -136,32 +98,25 @@ Our board might already have your fix and answer ready. Have a look!
   
 Please post on our [Slack team](https://slackinvite.squishedmooo.com/) any other device/application that you find to work with this emulator.
   
-  
-<!-- [![Youtube Demo](https://img.youtube.com/vi/c6MsG3oIehY/0.jpg)](https://www.youtube.com/watch?v=c6MsG3oIehY)
+
+## Documentation
+
+All documentation and instructions can be found over at [diyhue.readthedocs.io](https://diyhue.readthedocs.io/)
 
 
-
-
-
-
-<!-- ## qtHue
-
-<!-- You also may want to see my new project [qtHue](https://github.com/mariusmotea/qtHue) that provides a simple user interface for controlling the lights.
-![qtHue](https://github.com/mariusmotea/qtHue/blob/master/Screenshot.png?raw=true) -->
-
-## Contribute
+## Support us
 
 diyHue is open source and maintained by volunteers in their free time. You are welcome to contribute and become a recognised member of the diyHue community.
 Feel free to add pullrequests and commits to our beta branch.
 If you are experienced in 
 - Webdesign
 - Python
-- Arduino
+- Arduino/C++
 - Coding in general
 
 We highly appreciate your support, making diyHue even better!
-
-## Support
+<br></br>
+## Coffee
 
 diyHue is and will be free to use. However it does take a lot of time to maintain the code etc etc.
 
